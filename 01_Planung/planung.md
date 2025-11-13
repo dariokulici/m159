@@ -23,25 +23,31 @@ Diese Umgebung umfasst:
 
 ## 2. Allgemeine Angaben
 
-| Feld                                | Wert   |
-| ----------------------------------- | ------ |
-| Vorname                             | Dario  |
-| Nachname                            | Kulici |
-| Klasse                              | PE23c  |
-| Dokumentation (GIT-Repository-Link) |        |
+| Feld                                | Wert                                |
+| ----------------------------------- | ----------------------------------- |
+| Vorname                             | Dario                               |
+| Nachname                            | Kulici                              |
+| Klasse                              | PE23c                               |
+| Dokumentation (GIT-Repository-Link) | https://github.com/dariokulici/m159 |
 
 ---
 
 ## 3. Ressourcen
 
-| Feld                                                         | Wert                  |
-| ------------------------------------------------------------ | --------------------- |
-| Active Directory Second-Level-Domäne                         |                       |
-| Geplante öffentliche Domain (UPN) -> Registrieren Sie einen Namen unter https://dynv6.com/ |                       |
+| Feld                                                                                                                                                                                                                                                                                                                    | Wert                  |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| Active Directory Second-Level-Domäne                                                                                                                                                                                                                                                                                    | ad.kulici             |
+| Geplante öffentliche Domain (UPN) -> Registrieren Sie einen Namen unter https://dynv6.com/                                                                                                                                                                                                                              |                       |
 | Azure Education Account mit 80$ ([Anleitung für Freischaltung mit neuer nicht TBZ-E-Mail](../../../../02_Unterrichtsressourcen/03_Fachliteratur&Tutorials/Azure/QRC_AzureForStudents.pdf))<br />(Wenn Sie Ihre private E-Mail-Adresse nicht verwenden möchten, können Sie beispielsweise eine Gmail-Adresse erstellen.) |                       |
-| Azure Education Account Passwort                             | sdf3432lk4nsdfäö$3244 |
+| Azure Education Account Passwort                                                                                                                                                                                                                                                                                        | sdf3432lk4nsdfäö$3244 |
 
 ---
+
+Test Normaler Enter
+
+Jeztt ein schift enter
+
+zweite ziele
 
 ## 4. AWS VPC Setup
 
