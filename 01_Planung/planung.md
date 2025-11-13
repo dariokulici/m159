@@ -43,11 +43,6 @@ Diese Umgebung umfasst:
 
 ---
 
-Test Normaler Enter
-
-Jeztt ein schift enter
-test
-zweite ziele
 
 ## 4. AWS VPC Setup
 
@@ -55,13 +50,12 @@ zweite ziele
 Alle Instanzen liegen in einem öffentlichen Subnetz und sind über RDP (Port 3389) von außen erreichbar.  
 Alle weiteren Ports sind nur innerhalb des VPCs offen.  
 
-| Komponente                      | VPC-ID                | CIDR        | Name |
-| ------------------------------- | --------------------- | ----------- | ---- |
-| VPC                             | vpc-0470f613e45697700 | 10.0.0.0/16 |      |
-| M159-subnet-private1-us-east-1a |                       |             |      |
-| M159-subnet-private2-us-east-1b |                       |             |      |
-| M159-subnet-public1-us-east-1a  |                       |             |      |
-| M159-subnet-public2-us-east-1b  |                       |             |      |
+| Komponente                      | VPC-ID | CIDR        | Name             |
+| ------------------------------- | ------ | ----------- | ---------------- |
+| VPC                             |        | 10.0.0.0/16 | 159-kulici-vpc   |
+| M159-subnet-private1-us-east-1a |        | 10.0.1.0/24 | 159-kulici-priv1 |
+| M159-subnet-public2-us-east-1a  |        | 10.0.2.0/24 | 159-kulici-pub2  |
+
 
 ---
 
@@ -69,34 +63,33 @@ Alle weiteren Ports sind nur innerhalb des VPCs offen.
 
 ### Sicherheitsgruppe für Domain Controller
 
-| Regeltyp                     | Port(e)                 | Quelle  |
-| ---------------------------- | ----------------------- | ------- |
-| RDP                          | 3389  (TCP)             | 0.0.0.0 |
-| LDAP                         | 389 (TCP/UDP)           |         |
-| LDAPS                        | 636 (TCP)               |         |
-| Kerberos                     | 88 (TCP/UDP)            |         |
-| SMB                          | 445  (TCP)              |         |
-| DNS                          | 53 (TCP/UDP)            |         |
-| RPC                          | 135, 49152-65535  (TCP) |         |
-| ICMP                         | Alle                    |         |
-| Global Catalog               | 3268 (TCP)              |         |
-| Global Catalog SSL           | 3269 (TCP)              |         |
-| Kerberos Password Change/Set | 464 (TCP/UDP)           |         |
-|                              |                         |         |
+| Regeltyp                     | Port(e)                 | Quelle      |
+| ---------------------------- | ----------------------- | ----------- |
+| RDP                          | 3389  (TCP)             | 0.0.0.0     |
+| LDAP                         | 389 (TCP/UDP)           | 10.0.1.0/24 |
+| LDAPS                        | 636 (TCP)               | 10.0.1.0/24 |
+| Kerberos                     | 88 (TCP/UDP)            | 10.0.1.0/24 |
+| SMB                          | 445  (TCP)              | 10.0.1.0/24 |
+| DNS                          | 53 (TCP/UDP)            | 10.0.1.0/24 |
+| RPC                          | 135, 49152-65535  (TCP) | 10.0.1.0/24 |
+| ICMP                         | Alle                    | 0.0.0.0     |
+| Global Catalog               | 3268 (TCP)              | 10.0.1.0/24 |
+| Global Catalog SSL           | 3269 (TCP)              | 10.0.1.0/24 |
+| Kerberos Password Change/Set | 464 (TCP/UDP)           | 10.0.1.0/24 |
 
 ### Sicherheitsgruppe für Clients
 
-| Regeltyp | Port(e)     | Beschreibung                             | Quelle                                           |
-| -------- | ----------- | ---------------------------------------- | ------------------------------------------------ |
-| RDP      | 3389        | Remote Desktop                           | 0.0.0.0                                          |
-| TCP      | 88          | Kerberos Authentication                  | 10.0.0.0/20 <br/>10.0.128.0/20<br/>10.0.144.0/20 |
-| TCP      | 135         | RPC Endpoint Mapper                      | 10.0.0.0/20 <br/>10.0.128.0/20<br/>10.0.144.0/20 |
-| TCP      | 139         | NetBIOS Session Service                  | 10.0.0.0/20 <br/>10.0.128.0/20<br/>10.0.144.0/20 |
-| TCP      | 389         | LDAP                                     | 10.0.0.0/20 <br/>10.0.128.0/20<br/>10.0.144.0/20 |
-| UDP      | 53          | DNS                                      | 10.0.0.0/20 <br/>10.0.128.0/20<br/>10.0.144.0/20 |
-| TCP      | 445         | SMB/CIFS (Dateifreigabe, AD-Operationen) | 10.0.0.0/20 <br/>10.0.128.0/20<br/>10.0.144.0/20 |
-| TCP      | 49152-65535 | RPC Ephemeral Ports                      | 10.0.0.0/20 <br/>10.0.128.0/20<br/>10.0.144.0/20 |
-| ICMP     | Alle        | Ping etc.                                | 10.0.0.0/20 <br/>10.0.128.0/20<br/>10.0.144.0/20 |
+| Regeltyp | Port(e)     | Beschreibung                             | Quelle      |
+| -------- | ----------- | ---------------------------------------- | ----------- |
+| RDP      | 3389        | Remote Desktop                           | 0.0.0.0     |
+| TCP      | 88          | Kerberos Authentication                  | 10.0.1.0/24 |
+| TCP      | 135         | RPC Endpoint Mapper                      | 10.0.1.0/24 |
+| TCP      | 139         | NetBIOS Session Service                  | 10.0.1.0/24 |
+| TCP      | 389         | LDAP                                     | 10.0.1.0/24 |
+| UDP      | 53          | DNS                                      | 10.0.1.0/24 |
+| TCP      | 445         | SMB/CIFS (Dateifreigabe, AD-Operationen) | 10.0.1.0/24 |
+| TCP      | 49152-65535 | RPC Ephemeral Ports                      | 10.0.1.0/24 |
+| ICMP     | Alle        | Ping etc.                                | 0.0.0.0     |
 
 ---
 
@@ -104,13 +97,12 @@ Alle weiteren Ports sind nur innerhalb des VPCs offen.
 
 ### On-Premises Active Directory (AWS EC2)
 
-| Feld                                  | Wert                  |
-| ------------------------------------- | --------------------- |
-| Active Directory Third-Level-Domäne-1 | z.b. ec2.tbz.m159     |
-| Öffentlicher UPN-Suffix (später)      | z.b. m159tbz.v6.rocks |
-| Domänenadministrator                  | Administrator         |
-| Kennwort Domänenadministrator         |                       |
-| Kennwort-Demote (Herunterstufen)      |                       |
+| Feld                                  | Wert          |
+| ------------------------------------- | ------------- |
+| Active Directory Third-Level-Domäne-1 | ad.kulici.ch  |
+| Domänenadministrator                  | Administrator |
+| Kennwort Domänenadministrator         |               |
+| Kennwort-Demote (Herunterstufen)      |               |
 
 ### Azure AD (Entra ID)
 
@@ -123,18 +115,18 @@ Alle weiteren Ports sind nur innerhalb des VPCs offen.
 
 ### AWS Managed AD
 
-| Feld                                  | Wert                                                 |
-| ------------------------------------- | ---------------------------------------------------- |
-| Active Directory Third-Level-Domäne-2 | z.b. aws.tbz.m159                                    |
-| Trust-Typ                             | Tree-Root Trust                                      |
-| AWS Managed Admin User                | admin                                                |
-| AWS Managed Admin Passwort            |                                                      |
-| IP-Adresse                            |                                                      |
-| DNS-Server 1                          |                                                      |
-| DNS-Server 2                          |                                                      |
-| Trust Passwort                        |                                                      |
-| Subnetz 1                             | z.b. M159-subnet-private1-us-east-1a (10.0.128.0/20) |
-| Subnetz 2                             | z.b. M159-subnet-private2-us-east-1b (10.0.144.0/20) |
+| Feld                                  | Wert                 |
+| ------------------------------------- | -------------------- |
+| Active Directory Third-Level-Domäne-2 | ad.kulici.ch         |
+| Trust-Typ                             | Tree-Root Trust      |
+| AWS Managed Admin User                | admin_kul            |
+| AWS Managed Admin Passwort            | BzahcK1Vh!2my*KQcgn5 |
+| IP-Adresse                            |                      |
+| DNS-Server 1                          |                      |
+| DNS-Server 2                          |                      |
+| Trust Passwort                        |                      |
+| Subnetz 1                             |                      |
+| Subnetz 2                             |                      |
 
 ---
 
