@@ -1,10 +1,6 @@
-# M159 - Projekt-Setup-Sheet
+# M159 - Planung
 
 In diesem Dokument werden sämtliche Angaben sowie Passwörter, welche Sie für die Installation Ihrer Umgebung benötigen, festgehalten.
-
-![Modul_159_Architekturdiagramm](Modul_159_Architekturdiagramm.drawio.svg)
-
-
 
 ---
 
@@ -20,25 +16,12 @@ Diese Umgebung umfasst:
 - **Lokale AD-Domain** (zu Beginn), später **öffentliche Domain als UPN**  
 
 ---
-
-## 2. Allgemeine Angaben
-
-| Feld                                | Wert                                |
-| ----------------------------------- | ----------------------------------- |
-| Vorname                             | Dario                               |
-| Nachname                            | Kulici                              |
-| Klasse                              | PE23c                               |
-| Dokumentation (GIT-Repository-Link) | https://github.com/dariokulici/m159 |
-
----
-
-## 3. Ressourcen
+## 2. Ressourcen
 
 | Feld                                                                                                                                                                                                                                                                                                                    | Wert                  |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| Active Directory Second-Level-Domäne                                                                                                                                                                                                                                                                                    | ad.kulici             |
-| Geplante öffentliche Domain (UPN) -> Registrieren Sie einen Namen unter https://dynv6.com/                                                                                                                                                                                                                              |                       |
-| Azure Education Account mit 80$ ([Anleitung für Freischaltung mit neuer nicht TBZ-E-Mail](../../../../02_Unterrichtsressourcen/03_Fachliteratur&Tutorials/Azure/QRC_AzureForStudents.pdf))<br />(Wenn Sie Ihre private E-Mail-Adresse nicht verwenden möchten, können Sie beispielsweise eine Gmail-Adresse erstellen.) |                       |
+| Active Directory Second-Level-Domäne                                                                                                                                                                                                                                                                                    | kulici.ch             |
+| Geplante öffentliche Domain (UPN)                                                                                                                                                                                                                                                                                       | kulici.ch             |
 | Azure Education Account Passwort                                                                                                                                                                                                                                                                                        | sdf3432lk4nsdfäö$3244 |
 
 ---
