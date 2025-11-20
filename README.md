@@ -2,5 +2,5 @@
 
 <br>
 
-### [Planung](01_Planung/README.md)
 
+### [Vorbereitung](01_Vorbereitung/README.md)

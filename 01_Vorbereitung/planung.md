@@ -1,7 +1,5 @@
 # M159 - Planung
 
-In diesem Dokument werden sämtliche Angaben sowie Passwörter, welche Sie für die Installation Ihrer Umgebung benötigen, festgehalten.
-
 ---
 
 ## 1. Übersicht Umgebung
