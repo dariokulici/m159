@@ -16,13 +16,12 @@ Diese Umgebung umfasst:
 ---
 ## 2. Ressourcen
 
-| Feld                                                                                                                                                                                                                                                                                                                    | Wert                  |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| Active Directory Second-Level-Domäne                                                                                                                                                                                                                                                                                    | kulici.ch             |
-| Geplante öffentliche Domain (UPN)                                                                                                                                                                                                                                                                                       | kulici.ch             |
-| Azure Education Account Passwort                                                                                                                                                                                                                                                                                        | sdf3432lk4nsdfäö$3244 |
-
----
+| Feld                                                                                       | Wert      |           |
+| ------------------------------------------------------------------------------------------ | --------- | --------- |
+| Active Directory Second-Level-Domäne                                                       |           | kulici.ch |
+| Geplante öffentliche Domain (UPN)                                                          | kulici.ch |           |
+| Active Directory Second-Level-Domäne                                                       | ad.kulici |           |
+| Geplante öffentliche Domain (UPN) -> Registrieren Sie einen Namen unter https://dynv6.com/ | kulici.ch |           |
 
 
 ## 4. AWS VPC Setup
@@ -84,6 +83,7 @@ Alle weiteren Ports sind nur innerhalb des VPCs offen.
 | Domänenadministrator                  | Administrator |
 | Kennwort Domänenadministrator         |               |
 | Kennwort-Demote (Herunterstufen)      |               |
+| IP-Adresse                            | 10.0.2.10     |
 
 ### Azure AD (Entra ID)
 
@@ -98,13 +98,13 @@ Alle weiteren Ports sind nur innerhalb des VPCs offen.
 
 | Feld                                  | Wert                 |
 | ------------------------------------- | -------------------- |
-| Active Directory Third-Level-Domäne-2 | ad.kulici.ch         |
+| Active Directory Third-Level-Domäne-2 | aws.kulici.ch        |
 | Trust-Typ                             | Tree-Root Trust      |
 | AWS Managed Admin User                | admin_kul            |
 | AWS Managed Admin Passwort            | BzahcK1Vh!2my*KQcgn5 |
-| IP-Adresse                            |                      |
-| DNS-Server 1                          |                      |
-| DNS-Server 2                          |                      |
+| IP-Adresse                            | 10.0.1.10            |
+| DNS-/DC-Server 1                      | 10.0.2.10            |
+| DNS-Server 2                          | 8.8.8.8              |
 | Trust Passwort                        |                      |
 | Subnetz 1                             |                      |
 | Subnetz 2                             |                      |
@@ -113,12 +113,11 @@ Alle weiteren Ports sind nur innerhalb des VPCs offen.
 
 ## 7. EC2-Instanzen
 
-| Komponente                                       | FQDN                     | Elastic IP         | Private IP (CIDR) | Subnetz                         | DNS-Server 1 | DNS-Server 2 | Lokaler Admin | Kennwort |
-| ------------------------------------------------ | ------------------------ | ------------------ | ----------------- | ------------------------------- | ------------ | ------------ | ------------- | -------- |
-| IaaS/OnPrem AD DC                                | z.b. dc.ec2.tbz.m159     |                    | z.b.  10.0.129.10 | M159-subnet-private1-us-east-1a |              |              | Administrator |          |
-| Windows Server (Client)                          | z.b. client.ec2.tbz.m159 | z.b. 44.198.134.36 | z.b.  10.0.129.20 | M159-subnet-public1-us-east-1a  |              |              | Administrator |          |
-| Managed AWS EC2 DC                               |                          |                    |                   |                                 |              |              |               |          |
-| Windows Server Admin Center (Managed AWS EC2 DC) |                          |                    |                   |                                 |              |              |               |          |
+| Komponente                                       | FQDN               | Elastic IP | Private IP (CIDR) | Subnetz                         | DNS-Server 1 | DNS-Server 2 | Lokaler Admin | Kennwort |
+| ------------------------------------------------ | ------------------ | ---------- | ----------------- | ------------------------------- | ------------ | ------------ | ------------- | -------- |
+| IaaS/OnPrem AD DC                                | dc02.kulici.ch     | Noch offen | 10.0.2.10/24      | M159-subnet-private1-us-east-1a | 10.0.2.10    | 1.1.1.1      | Administrator |          |
+| Windows Server (Client)                          | client.kulici.ch   | Noch offen | 10.0.2.50/24      | M159-subnet-public1-us-east-1a  | 10.0.2.10    | 8.8.8.8      | Administrator |          |
+| Windows Server Admin Center (Managed AWS EC2 DC) | admin.ad.kulici.ch |            | 10.0.2.10/24      |                                 | 10.0.2.10    |              |               |          |
 
 ---
 
@@ -128,10 +127,10 @@ Definieren Sie je einen Benutzer dieser 3 Abteilungen
 
 | Abteilung | Name der Abteilung | Benutzername | Vorname | Nachname | Kennwort | Bereiche |
 | --------- | ------------------ | ------------ | ------- | -------- | -------- | -------- |
-| 1         | Sekretariat        |              |         |          |          | intern   |
-| 2         | Buchhaltung        |              |         |          |          | intern   |
-| 3         | GL                 |              |         |          |          | intern   |
-| 4         | Promoter           |              |         |          |          | extern   |
+| 1         | Sekretariat        | m.meier      | Martina | Meier    |          | intern   |
+| 2         | Buchhaltung        | g.gabel      | Gustav  | Gabel    |          | intern   |
+| 3         | GL                 | m.meer       | Martin  | Meer     |          | intern   |
+| 4         | Promoter           | s.serim      | Sigma   | Serim    |          | extern   |
 
 ## 09. Python-App-Registration (Entra-ID)
 
