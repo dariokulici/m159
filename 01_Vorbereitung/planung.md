@@ -16,12 +16,12 @@ Diese Umgebung umfasst:
 ---
 ## 2. Ressourcen
 
-| Feld                                                                                       | Wert      |           |
-| ------------------------------------------------------------------------------------------ | --------- | --------- |
-| Active Directory Second-Level-Domäne                                                       |           | kulici.ch |
-| Geplante öffentliche Domain (UPN)                                                          | kulici.ch |           |
-| Active Directory Second-Level-Domäne                                                       | ad.kulici |           |
-| Geplante öffentliche Domain (UPN) -> Registrieren Sie einen Namen unter https://dynv6.com/ | kulici.ch |           |
+| Feld                                 | Wert      |           |
+| ------------------------------------ | --------- | --------- |
+| Active Directory Second-Level-Domäne |           | kulici.ch |
+| Geplante öffentliche Domain (UPN)    | kulici.ch |           |
+| Active Directory Second-Level-Domäne | ad.kulici |           |
+| Geplante öffentliche Domain (UPN)    | kulici.ch |           |
 
 
 ## 4. AWS VPC Setup
@@ -139,12 +139,3 @@ Definieren Sie je einen Benutzer dieser 3 Abteilungen
 | Directory (tenant) ID   |      |
 | Application (client) ID |      |
 | Client Secret ID        |      |
-
-
-
-## 10. Hinweise
-
-- Beginnen Sie mit der lokalen Domain-Umgebung und konfigurieren Sie **später den UPN-Suffix** mit der öffentlichen Domain.  
-- Achten Sie auf **richtige Portfreigaben** in den AWS Sicherheitsgruppen, insbesondere für RDP, SMB und AD-Dienste.  
-- Dokumentieren Sie alle IP-Adressen, Benutzernamen und Kennwörter konsequent in dieser Vorlage.
-- Diese Vorlage wurde für das Schuljahr 2025/26 komplett neu erstellt. Falls Ihnen etwas fehlt, ist die Lehrperson dankbar, wenn Sie ihr dies mitteilen.
