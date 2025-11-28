@@ -1,7 +1,5 @@
-# Vorbereitung
+# Planung 📄
 
----
-
-- [Wissen aneignen](wissen.md)
 - [Planung](planung.md)
+- [Wissen aneignen](wissen.md)
 
