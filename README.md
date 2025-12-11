@@ -11,4 +11,8 @@
 
 - [AWS Infrastruktur aufbauen](02_AWS-Umgebung/infrastructure.md)
 
+<br>
 
+### [Einrichtung 🔨](03_Einrichtung/README.md) 
+
+- [Domain Controller 01](03_Einrichtung/dc01.md) 

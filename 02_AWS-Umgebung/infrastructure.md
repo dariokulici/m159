@@ -36,6 +36,8 @@ Das AWS Managed AD wird im privaten Subnetz deployed während die restlichen Ser
 
 ### Security Groups
 
+*Die Security Groups werden nach der [Planung](../01_Vorbereitung/planung.md#5-aws-sicherheitsgruppen) erstellt.*
+
 | ID  | Name      | Typ                          | Port        | Protocol | Quelle      |
 | --- | --------- | ---------------------------- | ----------- | -------- | ----------- |
 |     |           | **Windows Server**           |             |          |             |
@@ -80,7 +82,4 @@ Leider habe ich den Namen hier nicht auf "SG-Server" sondern auf "Domain Control
 | -------- | ------------------------------ | -------------- | -------------------- |
 | dc01     | Windows Server 2025 Datacenter | SG-Server      | sg-0ea971cd6cc8fafdb |
 | client   | Windows 10                     | SG-Client      | sg-0fe0db59dd8c6ffec |
-
-
-*Die Security Groups werden nach der [Planung](../01_Vorbereitung/planung.md#5-aws-sicherheitsgruppen) erstellt.*
 
