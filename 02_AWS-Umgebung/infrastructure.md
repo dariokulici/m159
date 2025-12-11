@@ -83,3 +83,6 @@ Leider habe ich den Namen hier nicht auf "SG-Server" sondern auf "Domain Control
 | dc01     | Windows Server 2025 Datacenter | SG-Server      | sg-0ea971cd6cc8fafdb |
 | client   | Windows 10                     | SG-Client      | sg-0fe0db59dd8c6ffec |
 
+<br>
+
+[Weiter zu "Domain Controller Einrichtung"](../03_Einrichtung/dc01.md) 

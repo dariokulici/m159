@@ -139,3 +139,7 @@ Definieren Sie je einen Benutzer dieser 3 Abteilungen
 | Directory (tenant) ID   |      |
 | Application (client) ID |      |
 | Client Secret ID        |      |
+
+<br>
+
+[Weiter zu "AWS Umgebung"](../02_AWS-Umgebung/README.md) 
