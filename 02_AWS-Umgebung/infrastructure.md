@@ -39,7 +39,7 @@ Das AWS Managed AD wird im privaten Subnetz deployed während die restlichen Ser
 | ID  | Name      | Typ                          | Port        | Protocol | Quelle      |
 | --- | --------- | ---------------------------- | ----------- | -------- | ----------- |
 |     |           | **Windows Server**           |             |          |             |
-|     | SG-Server | RDP                          | 3389        | TCP      | 0.0.0.0     |
+|     | SG-Server | RDP                          | 3389        | TCP      | 0.0.0.0/0   |
 |     | SG-Server | LDAP                         | 389         | TCP/UDP  | 10.0.1.0/24 |
 |     | SG-Server | LDAPS                        | 636         | TCP      | 10.0.1.0/24 |
 |     | SG-Server | Kerberos                     | 88          | TCP/UDP  | 10.0.1.0/24 |
@@ -59,6 +59,20 @@ Das AWS Managed AD wird im privaten Subnetz deployed während die restlichen Ser
 |     | SG-Client | SMB                          | 445         | TCP      | 10.0.1.0/24 |
 |     | SG-Client | RPC                          | 49152-65535 | TCP      | 10.0.1.0/24 |
 |     | SG-Client | ICMP                         | -           | ICMP     | 0.0.0.0/0   |
+
+
+Anbei zwei Bilder der jeweiligen Security Group. 
+
+
+#### Windows Server
+
+Leider habe ich den Namen hier nicht auf "SG-Server" sondern auf "Domain Controller" gesetzt. 
+
+<img width=90% height=50% alt="SG-Server.png" src="https://github.com/dariokulici/m159/raw/main/02_AWS-Umgebung/media/SG-Server.png">
+
+#### Windows Client
+
+<img width=90% height=50% alt="SG-Client.png" src="https://github.com/dariokulici/m159/raw/main/02_AWS-Umgebung/media/SG-Client.png">
 
 ### Hostnames
 
