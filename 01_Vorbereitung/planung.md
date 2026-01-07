@@ -16,12 +16,12 @@ Diese Umgebung umfasst:
 ---
 ## 2. Ressourcen
 
-| Feld                                 | Wert      |           |
-| ------------------------------------ | --------- | --------- |
-| Active Directory Second-Level-Domäne |           | kulici.ch |
-| Geplante öffentliche Domain (UPN)    | kulici.ch |           |
-| Active Directory Second-Level-Domäne | ad.kulici |           |
-| Geplante öffentliche Domain (UPN)    | kulici.ch |           |
+| Feld                                 | Wert             |
+| ------------------------------------ | ---------------- |
+| Active Directory Second-Level-Domäne | ad.kulici        |
+| Geplante öffentliche Domain (UPN)    | kulici.dynv6.net |
+| Active Directory Second-Level-Domäne | kulici           |
+| Geplante öffentliche Domain (UPN)    | kulici.dynv6.net |
 
 
 ## 4. AWS VPC Setup
