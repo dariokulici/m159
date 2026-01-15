@@ -42,25 +42,25 @@ Das AWS Managed AD wird im privaten Subnetz deployed während die restlichen Ser
 | --- | --------- | ---------------------------- | ----------- | -------- | ----------- |
 |     |           | **Windows Server**           |             |          |             |
 |     | SG-Server | RDP                          | 3389        | TCP      | 0.0.0.0/0   |
-|     | SG-Server | LDAP                         | 389         | TCP/UDP  | 10.0.1.0/24 |
-|     | SG-Server | LDAPS                        | 636         | TCP      | 10.0.1.0/24 |
-|     | SG-Server | Kerberos                     | 88          | TCP/UDP  | 10.0.1.0/24 |
-|     | SG-Server | SMB                          | 445         | TCP      | 10.0.1.0/24 |
-|     | SG-Server | DNS                          | 53          | TCP/UDP  | 10.0.1.0/24 |
-|     | SG-Server | ICMP                         | -           | ICMP     | 0.0.0.0/0   |
-|     | SG-Server | Global Catalog               | 3268        | TCP      | 10.0.1.0/24 |
-|     | SG-Server | Global Catalog SSL           | 3269        | TCP      | 10.0.1.0/24 |
-|     | SG-Server | Kerberos Password Change/Set | 464         | TCP/UDP  | 10.0.1.0/24 |
+|     | SG-Server | LDAP                         | 389         | TCP/UDP  | 10.0.0.0/22 |
+|     | SG-Server | LDAPS                        | 636         | TCP      | 10.0.0.0/22 |
+|     | SG-Server | Kerberos                     | 88          | TCP/UDP  | 10.0.0.0/22 |
+|     | SG-Server | SMB                          | 445         | TCP      | 10.0.0.0/22 |
+|     | SG-Server | DNS                          | 53          | TCP/UDP  | 10.0.0.0/22 |
+|     | SG-Server | ICMP                         | -           | ICMP     | 10.0.0.0/22 |
+|     | SG-Server | Global Catalog               | 3268        | TCP      | 10.0.0.0/22 |
+|     | SG-Server | Global Catalog SSL           | 3269        | TCP      | 10.0.0.0/22 |
+|     | SG-Server | Kerberos Password Change/Set | 464         | TCP/UDP  | 10.0.0.0/22 |
 |     |           |                              |             |          |             |
 |     |           | **Windows Client**           |             |          |             |
 |     | SG-Client | RDP                          | 3389        | TCP      | 0.0.0.0     |
-|     | SG-Client | Kerberos                     | 88          | TCP/UDP  | 10.0.1.0/24 |
-|     | SG-Client | NetBIOS Session Service      | 139         | TCP      | 10.0.1.0/24 |
-|     | SG-Client | LDAP                         | 389         | TCP      | 10.0.1.0/24 |
-|     | SG-Client | DNS                          | 53          | TCP/UDP  | 10.0.1.0/24 |
-|     | SG-Client | SMB                          | 445         | TCP      | 10.0.1.0/24 |
-|     | SG-Client | RPC                          | 49152-65535 | TCP      | 10.0.1.0/24 |
-|     | SG-Client | ICMP                         | -           | ICMP     | 0.0.0.0/0   |
+|     | SG-Client | Kerberos                     | 88          | TCP/UDP  | 10.0.0.0/22 |
+|     | SG-Client | NetBIOS Session Service      | 139         | TCP      | 10.0.0.0/22 |
+|     | SG-Client | LDAP                         | 389         | TCP      | 10.0.0.0/22 |
+|     | SG-Client | DNS                          | 53          | TCP/UDP  | 10.0.0.0/22 |
+|     | SG-Client | SMB                          | 445         | TCP      | 10.0.0.0/22 |
+|     | SG-Client | RPC                          | 49152-65535 | TCP      | 10.0.0.0/22 |
+|     | SG-Client | ICMP                         | -           | ICMP     | 10.0.0.0/22 |
 
 
 Anbei zwei Bilder der jeweiligen Security Group. 
