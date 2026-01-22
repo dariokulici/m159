@@ -127,10 +127,10 @@ Definieren Sie je einen Benutzer dieser 3 Abteilungen
 
 | Abteilung | Name der Abteilung | Benutzername | Vorname | Nachname | Kennwort | Bereiche |
 | --------- | ------------------ | ------------ | ------- | -------- | -------- | -------- |
-| 1         | Sekretariat        | m.meier      | Martina | Meier    |          | intern   |
-| 2         | Buchhaltung        | g.gabel      | Gustav  | Gabel    |          | intern   |
-| 3         | GL                 | m.meer       | Martin  | Meer     |          | intern   |
-| 4         | Promoter           | s.serim      | Sigma   | Serim    |          | extern   |
+| 1         | Sekretariat        | m.meier      | Martina | Meier    | Tbz12345 | intern   |
+| 2         | Buchhaltung        | g.gabel      | Gustav  | Gabel    | Tbz12345 | intern   |
+| 3         | GL                 | m.meer       | Martin  | Meer     | Tbz12345 | intern   |
+| 4         | Promoter           | s.serim      | Sigma   | Serim    | Tbz12345 | extern   |
 
 ## 09. Python-App-Registration (Entra-ID)
 
