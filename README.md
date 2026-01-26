@@ -16,3 +16,12 @@
 ### [Einrichtung 🔨](03_Einrichtung/README.md) 
 
 - [Domain Controller 01](03_Einrichtung/dc01.md) 
+
+<br>
+
+### [Admin Center 🔦](04_AdminCenter/README.md)
+
+- [Einrichtung des Admin Center V2](admincenter.md) 
+
+<br>
+
