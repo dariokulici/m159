@@ -79,3 +79,34 @@ Die Installation der RSAT Tools erfolgt über einen Powershell Befehl. So kann a
 
 <br>
 
+Auf dem nächsten Bild sieht man, dass die RSAT Tools funktionieren. Hier greife ich auf die User und Gruppen zu. 
+
+<img width=60% height=50% alt="13RSATToolsWorking.png" src="media/13RSATToolsWorking.png">
+
+
+<br>
+
+### WinRM
+
+Nach der Anleitung richte ich WinRM ein wie anbei gezeigt. 
+
+<img width=60% height=50% alt="09TestConn.png" src="media/09TestConn.png">
+
+<br>
+
+Nach ein wenig Recherche führe ich die folgenden Befehle aus und kann damit zum nächsten Schritt fortfahren. 
+
+<img width=60% height=50% alt="10ServerWinRM.png" src="media/10ServerWinRM.png">
+
+<br>
+
+<img width=60% height=50% alt="11AdminCenterWinRM.png" src="media/11AdminCenterWinRM.png">
+
+<br>
+
+### Admin Center Übersicht
+
+Somit ist das Admin Center aufgesetzt und funktionstüchtig. 
+
+<img width=60% height=50% alt="12AdminCenterDone.png" src="media/12AdminCenterDone.png">
+
