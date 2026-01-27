@@ -54,6 +54,27 @@ Auf dem nächsten Bild sieht man die Funktionalität. Bei mir klappte es erst na
 
 <br>
 
-### Fazit
+### GPO mit WMI-Filter
 
-Somit waren das 3 von 6 Aufgaben, die mit GPOs zu tun hatten. 
+WMI Filter sind praktisch if Statements. Es wird geprüft ob eine Anforderung erfüllt ist und wenn ja dann wird die GPO ausgeführt. 
+
+<br>
+
+Hier erstelle ich den Filter. 
+
+<img width=40% height=30% alt="09WMIFilter.png" src="media/09WMIFilter.png">
+
+<br>
+
+Als nächstes erstelle ich die GPO in der OU Promoter. 
+
+<img width=40% height=30% alt="10CopyFileGPO.png" src="media/10CopyFileGPO.png">
+
+<br>
+
+Nach dem Anpassen des WMI Filters applied er die GPO. 
+
+<img width=60% height=50% alt="11appliedgpo.png" src="media/11appliedgpo.png">
+
+<br>
+
