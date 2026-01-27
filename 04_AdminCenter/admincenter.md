@@ -112,11 +112,4 @@ Somit ist das Admin Center aufgesetzt und funktionstüchtig.
 
 <br>
 
-### HTTPS Einrichtung
-
-Um HTTPS einzurichten muss ein neues Zertifikat generiert, dieses per GPO auf allen Computern verteilt und dies beim Admin Center eingesetzt werden. 
-<br>
-Als erstes generiere ich ein neues Zertifikat. 
-
-<img width=60% height=50% alt="14GenerateNewCert.png" src="media/14GenerateNewCert.png">
-
+[Weiter zu GPO & DIT](../05_GPO/gpodit.md) 
