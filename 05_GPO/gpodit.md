@@ -36,3 +36,24 @@ Im folgenden Bild bin ich mit Martin Meer eingeloggt, der Mitglied bei Intern is
 
 <br>
 
+### Desktop Shortcut
+
+Damit das Desktop Shortcut auf Domänen Ebene sein kann aber trotzdem nur für die Gruppe Intern angewendet muss dies beim Security Filtering geändert werden. 
+
+<img width=60% height=50% alt="06CreateSHortcutGPO.png" src="media/06CreateSHortcutGPO.png">
+
+<br>
+
+<img width=60% height=50% alt="07Delegation.png" src="media/07Delegation.png">
+
+<br>
+
+Auf dem nächsten Bild sieht man die Funktionalität. Bei mir klappte es erst nach dem kompletten Logout des Users und nicht einfach mit gpupdate. 
+
+<img width=60% height=50% alt="08ShortcutWorks.png" src="media/08ShortcutWorks.png">
+
+<br>
+
+### Fazit
+
+Somit waren das 3 von 6 Aufgaben, die mit GPOs zu tun hatten. 
