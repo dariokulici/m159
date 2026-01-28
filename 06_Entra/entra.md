@@ -32,3 +32,7 @@ Danach konfiguriere ich SCP, sodass er Hybrid joined ist.
 
 <br>
 
+Anbei das Bild, auf dem man erkennt, dass der Entra Sync erfolgreich war. 
+
+<img width=40% height=30% alt="06Azureadjoined.png" src="media/06Azureadjoined.png">
+
