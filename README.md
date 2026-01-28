@@ -25,3 +25,19 @@
 
 <br>
 
+### [GPOs & DIT 🆎](05_GPO/README.md)
+
+- [Erstellen der GPOs](05_GPO/gpodit.md)
+
+<br>
+
+### [Entra ID 🛜](06_Entra/README.md) 
+
+- [Entra Connect & Synchronisation](06_Entra/entra.md) 
+
+<br>
+
+### [Python SSO App 💻](07_PythonApp/README.md) 
+
+- [Python Runtime & App Registrierung](07_PythonApp/pythonapp.md) 
+
