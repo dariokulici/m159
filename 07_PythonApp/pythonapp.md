@@ -23,19 +23,19 @@ Das Login ist erfolgreich.
 
 ### Manuelles Login
 
-placeholderVideo1
+[Nummer1Done.webm](https://github.com/user-attachments/assets/f2042e22-5238-4fcd-af4b-f9ae1a14ea5f)
 
 <br>
 
 ### Token basierte Anmeldung
 
-placeholderVideo2
+[Nummer2.webm](https://github.com/user-attachments/assets/f8b70128-cd56-4686-981d-927f8fef50af)
 
 <br>
 
 ### Login in Edge (Kerberos / WIA-SSO)
 
-placeholderVideo3
+[Schritt3.webm](https://github.com/user-attachments/assets/08b25c0d-5aef-4041-ac11-7354561afab2)
 
 <br>
 
