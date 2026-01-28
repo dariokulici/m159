@@ -7,7 +7,7 @@
 
 <br>
 
-### [Umgebung ☦️](02_AWS_Umgebung/README.md)
+### [Umgebung ☦️](02_AWS-Umgebung/README.md)
 
 - [AWS Infrastruktur aufbauen](02_AWS-Umgebung/infrastructure.md)
 
