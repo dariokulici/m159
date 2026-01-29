@@ -21,7 +21,7 @@
 
 ### [Admin Center 🔦](04_AdminCenter/README.md)
 
-- [Einrichtung des Admin Center V2](admincenter.md) 
+- [Einrichtung des Admin Center V2](04_AdminCenter/admincenter.md) 
 
 <br>
 
